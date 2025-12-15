@@ -10,5 +10,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/Sulthonauls_portfolio',
+  base: '/sulthonaul',
 })
