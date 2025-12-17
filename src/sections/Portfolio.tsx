@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import hmpui from '../assets/hmpui.png'
 import rps from '../assets/rps.png'
 import integrasi from '../assets/integrasi.png'
-import { motion, useScroll, useTransform, useSpring, MotionValue } from "motion/react"
+import { motion, useScroll, useTransform, MotionValue } from "motion/react"
 
 
 function useParallax(value: MotionValue<number>, distance: number) {
