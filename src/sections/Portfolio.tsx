@@ -106,14 +106,6 @@ function ImageRight({ src, title, desc }: ImageProps) {
 
 export default function Portfolio() {
 
-    const { scrollYProgress } = useScroll()
-
-    // smooth spring for progress bar
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001,
-    })
     return(
         <div className="w-full pt-40 md:pt-30 pb-20 snap-y snap-mandatory">
             <h2 className="text-2xl  md:text-4xl font-bold mb-20">Portfolio</h2>
