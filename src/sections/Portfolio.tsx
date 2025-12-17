@@ -124,7 +124,7 @@ export default function Portfolio() {
             <Image
                 src={integrasi}
                 title="Ayo Integrasi – Laravel, Bootstrap, Vue"
-                desc="n application used for the entire internal business operations at PT. Rahadhyan Integrasi Nusantara (RIN). This application covers project creation processes, finance, financial journaling, payslips, time tracking, and employee payroll"
+                desc="An internal application for managing end-to-end business operations at PT Rahadhyan Integrasi Nusantara (RIN), covering project management, finance, journaling, payslips, time tracking, and payroll."
             />
 
         </div>    
