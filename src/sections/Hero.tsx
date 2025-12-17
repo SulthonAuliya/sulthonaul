@@ -39,10 +39,10 @@ export default function Hero() {
     if (prefersReducedMotion) return;
 
     return(
-        <div className="relative pt-60 md:pt-75! lg:pt-100">
+        <div className="relative min-h-screen">
 
             <div className="absolute inset-0 z-0 ">
-                <div className="relative overflow-hidden mt-80 md:mt-5! lg:mt-30 flex md:flex-wrap items-center md:items-start justify-center gap-12 px-6">
+                <div className="relative overflow-hidden flex md:flex-wrap items-center md:items-start justify-center gap-12 px-6">
 
                     <Magnetic>
                     <motion.img
@@ -103,10 +103,10 @@ export default function Hero() {
                     </Magnetic>
 
                 </div>
-                </div>
+            </div>
 
 
-        <div className="relative z-10 pointer-events-none flex h-full items-center justify-center text-center">
+        <div className="relative z-10 pointer-events-none min-h-screen flex h-full items-center justify-center text-center">
             <div className="max-w-2xl">
                 <h1 className="text-2xl md:text-5xl font-bold text-white">
                 Hi, I’m a Fullstack Developer
