@@ -1,4 +1,5 @@
 import reactLogo from '../assets/react.svg'
+import laravelLogo from '../assets/hero/laravel.svg'
 import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -38,10 +39,10 @@ export default function Hero() {
     if (prefersReducedMotion) return;
 
     return(
-        <div className="relative w-full md:w-screen h-screen overflow-hidden">
+        <div className="relative pt-60 md:pt-100">
 
             <div className="absolute inset-0 z-0 ">
-                <div className="relative h-full max-w-full flex md:flex-wrap items-center md:items-start justify-center gap-12 px-6">
+                <div className="relative h-full max-w-full mt-30 flex md:flex-wrap items-center md:items-start justify-center gap-12 px-6">
 
                     <Magnetic>
                     <motion.img
@@ -51,7 +52,7 @@ export default function Hero() {
                             duration: 0.4,
                             scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
                         }}
-                        src="https://icon.icepanel.io/Technology/svg/Laravel.svg"
+                        src={laravelLogo}
                         className="-rotate-25 w-20 md:w-36 md:mt-50 opacity-80 drop-shadow-lg drop-shadow-orange-600 animate-pulse"
                         
                     />

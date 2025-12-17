@@ -1,7 +1,7 @@
 import { useRef } from 'react'
-import hmpui from '../assets/hmpui.png'
-import rps from '../assets/rps.png'
-import integrasi from '../assets/integrasi.png'
+import hmpui from '../assets/hmpui.webp'
+import rps from '../assets/rps.webp'
+import integrasi from '../assets/integrasi.webp'
 import { motion, useScroll, useTransform, MotionValue } from "motion/react"
 
 
@@ -108,7 +108,7 @@ export default function Portfolio() {
 
     return(
         <div className="w-full pt-40 md:pt-30 pb-20 snap-y snap-mandatory">
-            <h2 className="text-2xl  md:text-4xl font-bold mb-20">Portfolio</h2>
+            <h2 className="text-2xl  md:text-4xl font-bold mb-0">Portfolio</h2>
             <Image  
                 src={hmpui}
                 title="HMPUI – Laravel, Bootstrap"
