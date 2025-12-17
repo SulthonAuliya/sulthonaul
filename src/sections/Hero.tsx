@@ -41,8 +41,8 @@ export default function Hero() {
     return(
         <div className="relative min-h-screen">
 
-            <div className="absolute inset-0 z-0 ">
-                <div className="relative overflow-hidden flex md:flex-wrap items-center md:items-start justify-center gap-12 px-6">
+            <div className="absolute inset-0 z-0 flex items-center justify-center ">
+                <div className="relative overflow-hidden flex md:flex-wrap items-center md:items-start md:ml-30 justify-center gap-12 px-6">
 
                     <Magnetic>
                     <motion.img
