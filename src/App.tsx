@@ -1,27 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './components/Navbar.tsx'
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./sections/Hero";
+import Portfolio from "./sections/Portfolio";
 
-function App() {
+export default function App() {
 
   return (
     <>
-    <Navbar />
-      <div className='h-1000'>
-        {/* <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>  */}
-        {/* <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a> */}
-        
+      <Navbar />
 
+      <div
+        id="sections"
+        className="relative h-screen w-full"
+      >
 
+        <section className="panel h-screen overflow-y-hidden md:overflow-y-auto bg-[#1D1F25] relative">
+          <Hero />
+
+        </section>
+          {/* <div
+            className="
+              pointer-events-none
+               bottom-0 left-0 w-full
+              h-40 md:h-56
+              bg-linear-to-b from-[#1D1F25] to-[#EDEDE2]
+            "
+          /> */}
+
+        <section
+          id="portfolio"
+          className="panel overflow-y-auto bg-[#1D1F25]"
+        >
+          <Portfolio />
+        </section>
       </div>
     </>
-  )
+  );
 }
-
-export default App

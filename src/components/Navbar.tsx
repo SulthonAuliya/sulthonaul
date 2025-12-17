@@ -18,10 +18,10 @@ export default function Navbar() {
 
     return (
         <nav className={`
-            transition-all duration-300 ease-in-out
+            transition-all duration-300 ease-in-out z-50
             ${isScrolled ? 
-                "fixed top-0 left-0 w-full bg-[#1D1F25] shadow-md z-50 rounded-none" :
-                "absolute top-6 left-1/2 -translate-x-1/2 w-full md:w-[70%] lg:w-[60%] md:rounded-full bg-white/30 backdrop-blur"
+                "fixed top-0 left-0 w-full bg-[#1D1F25] shadow-md rounded-none" :
+                "absolute top-6 left-1/2 -translate-x-1/2 w-full md:w-[70%] lg:w-[60%] md:rounded-full bg-white/10 backdrop-blur"
             }
         `}>
            <div className="relative">
@@ -33,7 +33,7 @@ export default function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-4 [&>a]:text-white! [&>a]:text-lg md:[&>a]:text-xl">
-                    <a href="#">Portfolio</a>
+                    <a href="#portfolio">Portfolio</a>
                     <a href="#">Experience</a>
                     <a
                     href="#"

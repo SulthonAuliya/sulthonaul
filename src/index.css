@@ -1,5 +1,6 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
 :root {
   font-family: manrope;
   line-height: 1.5;
@@ -23,6 +24,10 @@ a {
 a:hover {
   color: #535bf2;
 }
+#root{
+  padding: 0 !important;
+}
+
 
 body {
   margin: 0;
