@@ -39,10 +39,10 @@ export default function Hero() {
     if (prefersReducedMotion) return;
 
     return(
-        <div className="relative pt-60 md:pt-100">
+        <div className="relative pt-60 md:pt-75! lg:pt-100">
 
             <div className="absolute inset-0 z-0 ">
-                <div className="relative h-full max-w-full mt-30 flex md:flex-wrap items-center md:items-start justify-center gap-12 px-6">
+                <div className="relative overflow-hidden mt-80 md:mt-5! lg:mt-30 flex md:flex-wrap items-center md:items-start justify-center gap-12 px-6">
 
                     <Magnetic>
                     <motion.img
@@ -98,7 +98,7 @@ export default function Hero() {
                             scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
                         }}
                         src="https://www.logo.wine/a/logo/Bootstrap_(front-end_framework)/Bootstrap_(front-end_framework)-Logo.wine.svg"
-                        className="rotate-40 w-28 md:w-60 md:mt-100 opacity-60 drop-shadow-fuchsia-700 animate-pulse"
+                        className="rotate-40 w-38 md:w-60 md:mt-100 opacity-60 drop-shadow-fuchsia-700 animate-pulse"
                     />
                     </Magnetic>
 

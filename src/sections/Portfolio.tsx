@@ -108,7 +108,7 @@ export default function Portfolio() {
 
     return(
         <div className="w-full pt-40 md:pt-30 pb-20 snap-y snap-mandatory">
-            <h2 className="text-2xl  md:text-4xl font-bold mb-0">Portfolio</h2>
+            <h1 className="text-2xl  md:text-4xl font-bold mb-0">Portfolio</h1>
             <Image  
                 src={hmpui}
                 title="HMPUI – Laravel, Bootstrap"
