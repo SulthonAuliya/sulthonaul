@@ -11,13 +11,14 @@ function useParallax(value: MotionValue<number>, distance: number) {
 
     return useTransform(value, [0, 1], [-distance, distance])
 }
+type Order = 1 | 2
 
 type ImageProps = {
   src: string
   title: string
   desc: string
-  order1: number
-  order2: number
+  order1: Order
+  order2: Order
 }
 
 function Image({ src, title, desc, order1, order2 }: ImageProps) {
@@ -29,6 +30,10 @@ function Image({ src, title, desc, order1, order2 }: ImageProps) {
   })
 
   const y = useParallax(scrollYProgress, 200)
+  const orderMap = {
+    1: "md:order-1",
+    2: "md:order-2",
+  }
   
 
   return (
@@ -51,7 +56,7 @@ function Image({ src, title, desc, order1, order2 }: ImageProps) {
         transition={{ duration: 0.7 }}
         src={src}
         alt={title}
-        className={`w-full max-w-lg order-1 md:order-${order1}`}
+        className={`w-full max-w-lg order-1 ${orderMap[order1]}`}
     />
 
     <motion.div
@@ -59,7 +64,7 @@ function Image({ src, title, desc, order1, order2 }: ImageProps) {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7 }}
         style={{ y: window.innerWidth < 768 ? 0 : y }}
-        className={`order-2 md:order-${order2}`}
+        className={`order-2 ${orderMap[order2]}`}
     >
         <h2 className="text-2xl md:text-3xl font-bold text-center md:text-left">
         {title}
