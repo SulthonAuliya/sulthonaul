@@ -54,7 +54,7 @@ export default function Navbar() {
                         className="
                             pointer-events-none
                             absolute left-0 -bottom-1
-                            h-[2px] w-full
+                            h-0.5 w-full
                             origin-left scale-x-0
                             bg-white
                             transition-transform duration-300 ease-out
@@ -84,7 +84,7 @@ export default function Navbar() {
                             className="
                             pointer-events-none
                             absolute left-0 -bottom-1
-                            h-[2px] w-full
+                            h-0.5 w-full
                             origin-left scale-x-0
                             bg-white
                             transition-transform duration-300 ease-out
@@ -112,7 +112,7 @@ export default function Navbar() {
                             className="
                                 pointer-events-none
                                 absolute left-0 -bottom-1
-                                h-[2px] w-full
+                                h-0.5 w-full
                                 origin-left scale-x-0
                                 bg-white
                                 transition-transform duration-300 ease-out
@@ -158,7 +158,7 @@ export default function Navbar() {
                                 "
                     >
                     <div className="flex flex-col px-6 py-4 space-y-4 [&>a]:text-white!">
-                        <a href="#" onClick={() => setMenuOpen(false)}>Portfolio</a>
+                        <a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
                         <a href="#" onClick={() => setMenuOpen(false)}>Experience</a>
                         <a
                         href="#"

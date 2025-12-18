@@ -119,8 +119,8 @@ export default function Hero() {
                 Hi, I’m a Fullstack Developer
                 </h1>
                 <h2 className="mt-4 text-lg md:text-2xl text-slate-200">
-                Delivering end-to-end <span className="font-bold">web applications</span>{" "}
-                with <span className="font-bold">2+ years</span> of hands-on development.
+                Delivering end-to-end <span className="font-bold text-white">web applications</span>{" "}
+                with <span className="font-bold text-white">2+ years</span> of hands-on development.
                 </h2>
             </motion.div>
         </div>
