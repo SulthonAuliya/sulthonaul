@@ -107,7 +107,14 @@ export default function Hero() {
 
 
         <div className="relative z-10 pointer-events-none min-h-screen flex h-full items-center justify-center text-center">
-            <div className="max-w-2xl">
+            <motion.div 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1}}
+                    transition={{
+                        duration: 0.7,
+                        scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                    }}
+            className="max-w-2xl">
                 <h1 className="text-2xl md:text-5xl font-bold text-white">
                 Hi, I’m a Fullstack Developer
                 </h1>
@@ -115,7 +122,7 @@ export default function Hero() {
                 Delivering end-to-end <span className="font-bold">web applications</span>{" "}
                 with <span className="font-bold">2+ years</span> of hands-on development.
                 </h2>
-            </div>
+            </motion.div>
         </div>
 
       </div>

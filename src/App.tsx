@@ -14,7 +14,7 @@ export default function App() {
         className="relative h-screen w-full"
       >
 
-        <section className="panel h-screen overflow-y-hidden md:overflow-y-auto bg-[#1D1F25] relative">
+        <section id="hero" className="panel h-screen overflow-y-hidden md:overflow-y-auto bg-[#1D1F25] relative">
           <Hero />
 
         </section>

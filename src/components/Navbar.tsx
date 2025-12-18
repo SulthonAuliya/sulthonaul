@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, delay } from "framer-motion";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -17,7 +17,15 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={`
+        <motion.nav 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1}}
+                    viewport={{ once: true }}
+                    transition={{
+                        duration: 0.4,
+                        scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                    }}
+        className={`
             transition-all duration-300 ease-in-out z-50
             ${isScrolled ? 
                 "fixed top-0 left-0 w-full bg-[#1D1F25] shadow-md rounded-none" :
@@ -26,22 +34,107 @@ export default function Navbar() {
         `}>
            <div className="relative">
                 {/* Top bar */}
-                <div className="flex items-center justify-between px-4 md:px-6 py-3">
-                <span className="font-bold text-lg md:text-xl text-white">
+                <div className="flex items-center justify-between px-4 md:px-6 py-3 [&>a]:text-white!">
+                <motion.a 
+                    href="#hero"
+                    whileHover={{
+                        scale: [null, 1.1],
+                        transition: { duration: 0.2 },
+                    }}
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        duration: 0.4,
+                        scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+                    }}
+                    className="font-bold text-lg md:text-xl text-white relative inline-block group">
                     Sulthonaul
-                </span>
+                    <span
+                        className="
+                            pointer-events-none
+                            absolute left-0 -bottom-1
+                            h-[2px] w-full
+                            origin-left scale-x-0
+                            bg-white
+                            transition-transform duration-300 ease-out
+                            group-hover:scale-x-100
+                            "
+                        />
+                </motion.a>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-4 [&>a]:text-white! [&>a]:text-lg md:[&>a]:text-xl">
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#">Experience</a>
-                    <a
+                    <motion.a 
+                    className="relative inline-block group"
+                    whileHover={{
+                        scale: [null, 1.1],
+                        transition: { duration: 0.2 },
+                    }}
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        duration: 0.2,
+                        delay: 0.3,
+                        scale: { type: "spring", visualDuration: 0.2, bounce: 0.5 },
+                    }} href="#portfolio">
+                        Portfolio
+                        <span
+                            className="
+                            pointer-events-none
+                            absolute left-0 -bottom-1
+                            h-[2px] w-full
+                            origin-left scale-x-0
+                            bg-white
+                            transition-transform duration-300 ease-out
+                            group-hover:scale-x-100
+                            "
+                        />
+                    </motion.a>
+                    <motion.a 
+                        className="relative inline-block group"
+                        whileHover={{
+                            scale: [null, 1.1],
+                            transition: { duration: 0.2 },
+                        }}
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 0.2,
+                            delay: 0.6,
+                            scale: { type: "spring", visualDuration: 0.2, bounce: 0.5 },
+                        }}
+                        href="#">
+                            Experience
+                            <span
+                            className="
+                                pointer-events-none
+                                absolute left-0 -bottom-1
+                                h-[2px] w-full
+                                origin-left scale-x-0
+                                bg-white
+                                transition-transform duration-300 ease-out
+                                group-hover:scale-x-100
+                                "
+                            />    
+                        </motion.a>
+                    <motion.a
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        duration: 0.2,
+                        delay: 0.9,
+                        scale: { type: "spring", visualDuration: 0.2, bounce: 0.5 },
+                    }}
                     href="#"
                     className="rounded-lg bg-[#ED985F] px-4 py-1
                                 text-white font-medium hover:bg-[#e0854f] transition"
                     >
                     About
-                    </a>
+                    </motion.a>
                 </div>
 
                 {/* Mobile Hamburger */}
@@ -79,6 +172,6 @@ export default function Navbar() {
                 )}
                 </AnimatePresence>
             </div>
-        </nav>
+        </motion.nav>
     );
 }

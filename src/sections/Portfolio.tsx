@@ -41,7 +41,8 @@ function Image({ src, title, desc, order1, order2 }: ImageProps) {
     ref={ref}
     className="
         img-container snap-start
-        min-h-screen
+        md:min-h-screen
+        mt-30 md:mt-0
         px-10
         flex flex-col
         gap-6
@@ -62,7 +63,7 @@ function Image({ src, title, desc, order1, order2 }: ImageProps) {
     <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.9 }}
         style={{ y: window.innerWidth < 768 ? 0 : y }}
         className={`order-2 ${orderMap[order2]}`}
     >
@@ -84,7 +85,7 @@ export default function Portfolio() {
 
     return(
         <div className="w-full pt-40 md:pt-30 pb-20 snap-y snap-mandatory">
-            <h1 className="text-2xl  md:text-4xl font-bold mb-0">Portfolio</h1>
+            <h1 className="text-2xl  md:text-4xl font-bold mb-0">Highlighted Portfolio</h1>
             <Image  
                 src={hmpui}
                 title="HMPUI – Laravel, Bootstrap"

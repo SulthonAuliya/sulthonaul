@@ -28,6 +28,9 @@ a:hover {
   padding: 0 !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;

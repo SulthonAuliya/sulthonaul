@@ -30,8 +30,8 @@ export default function Magnetic({
 
     const rect = el.getBoundingClientRect();
 
-    const x = e.clientX - (rect.left + rect.width / 3);
-    const y = e.clientY - (rect.top + rect.height / 3);
+    const x = e.clientX - (rect.left + rect.width / 5);
+    const y = e.clientY - (rect.top + rect.height / 5);
 
     const moveX = clamp(-x * strength, max);
     const moveY = clamp(-y * strength, max);
