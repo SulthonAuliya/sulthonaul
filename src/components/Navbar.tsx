@@ -106,8 +106,8 @@ export default function Navbar() {
                             delay: 0.6,
                             scale: { type: "spring", visualDuration: 0.2, bounce: 0.5 },
                         }}
-                        href="#">
-                            Experience
+                        href="#experience">
+                            Experiences
                             <span
                             className="
                                 pointer-events-none
@@ -120,7 +120,12 @@ export default function Navbar() {
                                 "
                             />    
                         </motion.a>
-                    <motion.a
+                    <motion.a 
+                    className="relative inline-block group"
+                    whileHover={{
+                        scale: [null, 1.1],
+                        transition: { duration: 0.2 },
+                    }}
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -128,12 +133,19 @@ export default function Navbar() {
                         duration: 0.2,
                         delay: 0.9,
                         scale: { type: "spring", visualDuration: 0.2, bounce: 0.5 },
-                    }}
-                    href="#"
-                    className="rounded-lg bg-[#ED985F] px-4 py-1
-                                text-white font-medium hover:bg-[#e0854f] transition"
-                    >
-                    About
+                    }} href="#portfolio">
+                        Portfolio
+                        <span
+                            className="
+                            pointer-events-none
+                            absolute left-0 -bottom-1
+                            h-0.5 w-full
+                            origin-left scale-x-0
+                            bg-white
+                            transition-transform duration-300 ease-out
+                            group-hover:scale-x-100
+                            "
+                        />
                     </motion.a>
                 </div>
 
@@ -159,14 +171,8 @@ export default function Navbar() {
                     >
                     <div className="flex flex-col px-6 py-4 space-y-4 [&>a]:text-white!">
                         <a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
-                        <a href="#" onClick={() => setMenuOpen(false)}>Experience</a>
-                        <a
-                        href="#"
-                        onClick={() => setMenuOpen(false)}
-                        className="rounded-lg bg-[#ED985F] px-4 py-2 text-center font-medium"
-                        >
-                        About
-                        </a>
+                        <a href="#experience" onClick={() => setMenuOpen(false)}>Experiences</a>
+                        <a href="#experience" onClick={() => setMenuOpen(false)}>About</a>
                     </div>
                     </motion.div>
                 )}
