@@ -12,6 +12,13 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
+    role: "Junior IT Coding Teacher",
+    company: "Koding Next",
+    period: "January 2026 — now",
+    description:
+      "Acting as a teacher for junior coders ranging from elementary to high school students. Teaching various programming languages and concepts, including Python, JavaScript, HTML/CSS, Roblox Development, Basic algorithm using scratch and minecraft education. Providing personalized feedback, and fostering a supportive learning environment to help students develop their coding skills effectively.",
+  },
+  {
     role: "Fullstack Developer",
     company: "PT. Rahadhyan Integrasi Nusantara",
     period: "Mei 2023 — July 2025",
